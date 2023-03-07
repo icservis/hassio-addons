@@ -92,6 +92,7 @@ transip_api_key: ''
 inwx_username: ''
 inwx_password: ''
 inwx_shared_secret: ''
+active24_token: ''
 ```
 
 ## Advanced
@@ -487,6 +488,26 @@ on the DNS zone to be used for authentication.
 
 </details>
 
+<details>
+  <summary>Active24</summary>
+
+  
+
+  Example configuration:
+  ```yaml
+  email: your.email@example.com
+  domains:
+    - your.domain.tld
+  certfile: fullchain.pem
+  keyfile: privkey.pem
+  challenge: dns
+  dns:
+    provider: dns-active24
+    active24_token: ABCDEFGHIJKLMNOPQRSTUVWXYZ012345
+  ```
+
+</details>
+
 ## Certificate files
 
 The certificate files will be available within the "ssl" share after successful request of the certificates.
@@ -519,6 +540,7 @@ dns-netcup
 dns-gandi
 dns-transip
 dns-inwx
+dns-active24
 ```
 
 ## Support
