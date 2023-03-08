@@ -129,7 +129,7 @@ elif [ "${CHALLENGE}" == "dns" ] && [ "${DNS_PROVIDER}" == "dns-inwx" ]; then
 # Active24
 elif [ "${CHALLENGE}" == "dns" ] && [ "${DNS_PROVIDER}" == "dns-active24" ]; then
     bashio::config.require 'dns.active24_token'
-    PROVIDER_ARGUMENTS+=("--authenticator" "dns-active24" "--dns-active24-credentials" /data/dnsapikey "--dns-active24-propagation-seconds" "${PROPAGATION_SECONDS}")
+    PROVIDER_ARGUMENTS+=("-v" "--authenticator" "dns-active24" "--dns-active24-credentials" /data/dnsapikey "--dns-active24-propagation-seconds" "${PROPAGATION_SECONDS}")
 
 #All others
 else
