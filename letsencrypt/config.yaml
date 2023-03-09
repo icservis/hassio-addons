@@ -69,7 +69,7 @@ schema:
     ovh_application_secret: str?
     ovh_consumer_key: str?
     ovh_endpoint: str?
-    propagation_seconds: int(60,3600)?
+    propagation_seconds: int(15,3600)?
     provider: "list(dns-azure|dns-cloudflare|dns-cloudxns|dns-digitalocean|\
       dns-directadmin|dns-dnsimple|dns-dnsmadeeasy|dns-gehirn|\
       dns-google|dns-hetzner|dns-linode|dns-luadns|dns-njalla|dns-nsone|dns-ovh|\
